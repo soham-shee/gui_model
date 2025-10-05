@@ -119,7 +119,7 @@ if uploaded_files and file:
         test_set_scaled = sc.fit_transform(test_set)
         inputs=test_set_scaled
         X_test = []
-        for i in range(1000,len(inputs)):
+        for i in range(1000,len(inputs)+1):
             X_test.append(inputs[i-1000:i,0])
         X_test = np.array(X_test)
         X_test = np.reshape(X_test, (X_test.shape[0],X_test.shape[1],1))
